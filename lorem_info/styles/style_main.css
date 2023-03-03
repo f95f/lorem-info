@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400&family=Lato:wght@300;400&display=swap');
+
 :root{
     
     /* Color pallete */
@@ -6,7 +8,7 @@
     --light1: #FDECE8;
     --dark1: #461406;
     
-    --highlight2: #37F0B7;
+    --highlight2: #1ea7d4;
     --light2: #D0F0FB;
     --dark2: #02161C;
 
@@ -14,69 +16,116 @@
     --mid2: #44C5F0;
     --mid3: #4563D1;
 
-}
+    --shadow: #02161C55;
+    
+    /* Fonts */
+
+    --lato: 'Lato', sans-serif;
+    --karla: 'Karla', sans-serif;
+    
+    /* Config */
+
+    --cardSh: 3px 3px 5px var(--shadow);
+
+}   
 
 *{margin: 0; padding: 0;}
 header{
-    height: 100px;
     width: 100%;
-    background-color: pink;
-    margin-bottom: 1rem;
+    margin: 0;
+    background-color: var(--mid3);
+    box-shadow: 3px 3px 8px var(--shadow);
 }
 
 #logomarca{
     width: 60%;
     margin: 0;
-    outline: 1px solid blue;
 }
 
-#logo{
+img{
     width: 70px;
     height: 70px;
-    margin: 15px;
+    margin: 1.6rem;
     display: inline-block;
+
+    background-color: var(--light2);
 }
 
 h1{
     display: inline;
     height: 100px;
     width: 50%;
-    margin: 0 15px;
+    margin: 1.6rem;
+
+    color: var(--light2);
+    font-family: var(--lato);
     text-align: right;
-    line-height: 100px;
+    font-weight: 400;
+    line-height: 70px;
+    text-transform: uppercase;
 }
 #user_greet{
-    display: inline-block;
+    display: none;
     height: 100px;
     width: 10%;
     outline: 1px solid red;
 }
 main{
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 5fr));
-    grid-auto-rows: 300px;
+    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 5fr));
+    grid-auto-rows: 280px;
     
-    margin: 1rem;
+    margin: 1.6rem;
 
 }
 
 .card{
-    background-color: aquamarine;
-    outline: 1px solid lime;
+    padding: 1.6rem;
+    background-color: var(--mid2);
+    box-shadow: var(--cardSh);
+    
+    color: var(--light2);
+    font-family: var(--lato);
 
-    font-size: 3em;
+    transition: all .2s;
 }
 
+.card:hover{
+    background-color: var(--highlight2);
+    box-shadow: none;
 
+    cursor: pointer;
+}
+
+.card:active{
+    background-color: var(--mid3);
+    box-shadow: none;
+
+}
+
+.card img{
+    display: block;
+    margin: 0;
+    margin: auto;
+}
+
+.card h3{
+    margin: 1.6rem 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
 
 footer{
     clear: both;
     width: 100%;
     height: 80px;
 
+    background-color: var(--mid3);
+    color: var(--light1);
     text-align: center;
-    background-color: cornflowerblue;
+    font-family: var(--karla);
 }
 footer span{
     line-height: 80px;
