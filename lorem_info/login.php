@@ -1,3 +1,9 @@
+<?php
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,8 +18,16 @@
     <main>
         <h1>Olá!</h1>
         <h2>Identifique-se:</h2>
-        <form action="" method = "post">
+
+        <form method = "post">
+            <label for="txtLogin">Usuário</label>
+            <input type="text" name="txtLogin" id="txtLogin">
+            <label for="txtSenha">senha</label>
+            <input type="password" name="txtSenha" id="txtSenha">
+
+            <input type="submit" id = "btnLogin" value = "Entrar">
         </form>
+
     </main>
 </body>
 </html>
