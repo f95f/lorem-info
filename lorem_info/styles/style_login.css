@@ -1,4 +1,7 @@
 main{
+    display: flex;
+    justify-content: space-between;
+    
     max-width: 600px;
     max-height: 400px;
     margin: auto;
@@ -10,8 +13,6 @@ main{
 }
 
 h1{
-    margin: 0;
-
     text-align: center;
     font-family: var(--lato);
     font-size: 2.4em;
@@ -26,7 +27,6 @@ h2{
 #loginImg{
     width: 50%;
     height: 400px;
-    float: right;
     background-color: yellowgreen;
 }
 
@@ -34,7 +34,6 @@ h2{
     width: 50%;
     height: 360px;
     padding: 20px 0;
-    float: left;
 
     outline: 1px solid lime;
     background-color: lightcoral;

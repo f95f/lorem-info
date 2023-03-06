@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    $_SESSION['user'] = 'admin';    
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,12 +19,13 @@
 
 <header>
     <div id="logomarca">
-        <img src="" alt="" id = "logo">
-        <h1><?php echo $title; ?></h1>
+        <img src = "" alt="" id = "logo">
     </div>
-
+    
+    <h1><?php echo $title; ?></h1>
+    
     <div id = "user_greet">
-        <h2>Olá, <?php #$_SESSION['user']?></h2>    
+        <h2>Olá, <?php $_SESSION['user']?></h2>    
     </div>
         
 </header>
