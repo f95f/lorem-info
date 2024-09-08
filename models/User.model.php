@@ -8,6 +8,18 @@ class User {
     private $createdAt;
     private $updatedAt;
 
+    public function __construct() {
+        $this -> setCreatedAt(date());
+    }
+
+    public function printUser() {
+        $userInfo = $this->getName . " (" . $this->getEmail . ")";
+        return $userInfo;
+    }
+    public function hasAccess($role) {
+        return $this.getRole == $role;
+    }
+
     public function setName($name) {
         $this->name = $name;
     }
@@ -36,7 +48,31 @@ class User {
         $this -> updatedAt = $updatedAt;
     }
 
-    public function __construct() {
-        $this -> setCreatedAt(date());
+    public function getName($name) {
+        return $this->name;
+    }
+
+    public function getEmail($email) {
+        return $this -> email;
+    }
+
+    public function getPassword($password) {
+        return $this -> password;
+    }
+
+    public function getStatus($status) {
+        return $this -> status;
+    }
+
+    public function getRole($role) {
+        return $this -> role;
+    }
+
+    public function getCreatedAt($createdAt) {
+        return $this -> createdAt;
+    }
+
+    public function getUpdatedAt($updatedAt) {
+        return $this -> updatedAt;
     }
 }
